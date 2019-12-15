@@ -6,7 +6,7 @@ var testCheck= "";
 
 
 function intervaliar() {
-	console.log("intervalio");
+	//console.log("intervalio");
 	var chusm = document.querySelector("h1").innerText;
 	if ( chusm != testCheck) {
 		testCheck =chusm;
