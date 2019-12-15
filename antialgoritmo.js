@@ -1,9 +1,23 @@
 
-document.querySelectorAll(".html5-video-player").onload = function(){chusmearTitulo()};
+//document.querySelector("h1").onchange = function(){console.log("cambio")};
 
-function chusmearTitulo(){
-	guardarLS2(document.querySelector("h1").innerText);
+var testCheck= "";
+
+
+
+function intervaliar() {
+	console.log("intervalio");
+	var chusm = document.querySelector("h1").innerText;
+	if ( chusm != testCheck) {
+		testCheck =chusm;
+		guardarLS2(testCheck);
+	}
+		
 }
+
+/*function chusmearTitulo(){
+	guardarLS2(document.querySelector("h1").innerText);
+}*/
 
 function clickSaltar(){
 	//console.log("entrofuncionsaltar");
@@ -23,7 +37,7 @@ function guardarLS2(testo){
 	  //console.log("ACATAH");
 	  
 	  
-	  if (/*cajon.length > 20 && */ cajon[inin].repes > getAVG() ) {
+	  if (/*cajon.length > 20 && */ cajon[inin].repes >= getAVG() +1 ) {
 		  //console.log("entrocondicionsaltar");
 		  clickSaltar();
 	  } else {
@@ -55,6 +69,8 @@ function getLS() {
 	  return [];
 	}
 }
+
+setInterval( function(){intervaliar()}, 4000);
 
 /*
 
